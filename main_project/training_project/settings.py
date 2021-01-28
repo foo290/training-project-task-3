@@ -41,7 +41,8 @@ INSTALLED_APPS = [
 ]
 
 USER_INSTALLED_APPS = [
-    'image_uploader.apps.ImageUploaderConfig',
+    'home',
+    'storages'
 ]
 
 INSTALLED_APPS += USER_INSTALLED_APPS
@@ -125,3 +126,14 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Cloud Configs -------------------------------------------------
+
+AWS_STORAGE_BUCKET_NAME = cfg.AWS_STORAGE_BUCKET_NAME
+AWS_ACCESS_KEY_ID = cfg.AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY = cfg.AWS_SECRET_ACCESS_KEY
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
