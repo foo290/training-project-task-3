@@ -1,0 +1,1 @@
+SECRET_KEY = 'a+@p!z!_-^83+p^_^kly$40m^xxw^9_9o18b846e-$0&ijn7=a'
